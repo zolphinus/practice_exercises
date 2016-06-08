@@ -1,0 +1,14 @@
+<!-- create.html -->
+
+    <div id="createView">
+        <h1>Create View</h1>
+		
+		<form name="entryForm" ng-submit="saveEntry()">
+			<p>Title : <input type="string" ng-model="title" placeholder="Enter title here" required></p>
+			<p>Url : <input type="url" ng-model="url" placeholder="Enter url here" required></p>
+			<p>Description : <input type="text" ng-model="description" placeholder="Enter description here" required></p>
+			<button ng-disabled="myForm.$invalid">Save</button>
+		</form>
+		<p>{{createdAt}}</p>
+		
+	</div>
