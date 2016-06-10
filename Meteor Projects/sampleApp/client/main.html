@@ -1,0 +1,23 @@
+<head>
+  <title>simpleApp</title>
+</head>
+
+<body>
+  <h1>Try this simple app!</h1>
+
+  {{> createView}}
+</body>
+
+<template name="createView">
+  <form>
+		<p>Title : <input type="text" name="title" required></p>
+		<p>Url : <input type="url" name="url" required></p>
+		<p>Description : <input type="text" name="description" required></p>
+		<input type="submit" value="Entry">
+  </form>
+  {{> listView}}
+</template>
+
+<template name="listView">
+	{{> reactiveTable collection=entryTable settings=entrySettings}}
+</template>
